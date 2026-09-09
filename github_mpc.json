@@ -1,0 +1,20 @@
+{
+  "name": "GitHub MCP Server",
+  "description": "GitHub Remote MCP Server exposing all GitHub MCP tools",
+  "category": "MCP Server",
+  "authenticationType": "ExternalOAuth",
+  "publisher": "GitHub",
+  "server": {
+    "url": "https://api.githubcopilot.com/mcp/x/all",
+    "transport": "StreamableHttp"
+  },
+  "oauth": {
+    "authorizationType": "OAuth2"
+  },
+  "tools": [
+    {
+      "name": "*",
+      "description": "All tools exposed by the GitHub MCP Server"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+DEBUG: cli.knack.cli: Command arguments: ['rest', '--method', 'GET', '--url', 'https://graph.microsoft.com/beta/copilot/admin/catalog/packages', '--debug']
+DEBUG: cli.knack.cli: __init__ debug log:
+Cannot enable color.
+DEBUG: cli.knack.cli: Event: Cli.PreExecute []
+DEBUG: cli.knack.cli: Event: CommandParser.OnGlobalArgumentsCreate [<function CLILogging.on_global_arguments at 0x1061027a0>, <function OutputProducer.on_global_arguments at 0x1062dafc0>, <function CLIQuery.on_global_arguments at 0x106309440>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableCreate []
+DEBUG: cli.azure.cli.core: Using packaged command index for profile 'latest'.
+DEBUG: cli.azure.cli.core: Found installed extension 'application-insights' (azext_applicationinsights).
+DEBUG: cli.azure.cli.core: Blending packaged core index with local extension index.
+DEBUG: cli.azure.cli.core: Modules found from index for 'rest': ['azure.cli.command_modules.util']
+DEBUG: cli.azure.cli.core: Loading command modules...
+DEBUG: cli.azure.cli.core: Loaded command modules in parallel:
+DEBUG: cli.azure.cli.core: Name                  Load Time    Groups  Commands
+DEBUG: cli.azure.cli.core: util                      0.001         1         3
+DEBUG: cli.azure.cli.core: Total (1)                 0.002         1         3
+DEBUG: cli.azure.cli.core: These extensions are not installed and will be skipped: ['azext_ai_examples', 'azext_next']
+DEBUG: cli.azure.cli.core: Loading extensions:
+DEBUG: cli.azure.cli.core: Name                  Load Time    Groups  Commands  Directory
+DEBUG: cli.azure.cli.core: Total (0)                 0.000         0         0  
+DEBUG: cli.azure.cli.core: Loaded 1 groups, 3 commands.
+DEBUG: cli.azure.cli.core: Found a match in the command table.
+DEBUG: cli.azure.cli.core: Raw command  : rest
+DEBUG: cli.azure.cli.core: Command table: rest
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreCommandTableTruncate [<function AzCliLogging.init_command_file_logging at 0x1066027a0>]
+DEBUG: cli.azure.cli.core.azlogging: metadata file logging enabled - writing logs to '/Users/abhisingh/.azure/commands/2026-07-21.12-44-21.rest.1241.log'.
+INFO: az_command_data_logger: command args: rest --method {} --url {} --debug
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreArgumentLoad [<function register_global_subscription_argument.<locals>.add_subscription_parameter at 0x10662be20>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostArgumentLoad []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostCommandTableCreate [<function register_ids_argument.<locals>.add_ids_arguments at 0x10663c4a0>, <function register_global_policy_argument.<locals>.add_global_policy_argument at 0x10663c5e0>, <function register_cache_arguments.<locals>.add_cache_arguments at 0x10663c680>, <function register_upcoming_breaking_change_info.<locals>.update_breaking_change_info at 0x10663c720>]
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnCommandTableLoaded []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPreParseArgs []
+DEBUG: cli.knack.cli: Event: CommandInvoker.OnPostParseArgs [<function OutputProducer.handle_output_argument at 0x1062db060>, <function CLIQuery.handle_query_parameter at 0x1063094e0>, <function register_ids_argument.<locals>.parse_ids_arguments at 0x10663c540>]
+DEBUG: cli.azure.cli.core.util: Retrieving token for resource https://graph.microsoft.com/
+DEBUG: cli.azure.cli.core.auth.persistence: build_persistence: location='/Users/abhisingh/.azure/msal_token_cache.json', encrypt=False
+DEBUG: cli.azure.cli.core.auth.binary_cache: load: /Users/abhisingh/.azure/msal_http_cache.bin
+DEBUG: urllib3.util.retry: Converted retries value: 1 -> Retry(total=1, connect=None, read=None, redirect=None, status=None)
+DEBUG: msal.application: Broker enabled? None
+DEBUG: cli.azure.cli.core.auth.msal_credentials: UserCredential.acquire_token: scopes=['https://graph.microsoft.com//.default'], claims_challenge=None, kwargs={}
+DEBUG: msal.application: Cache hit an AT
+DEBUG: msal.telemetry: Generate or reuse correlation_id: 15f6710a-b060-48dc-9510-6f19ce1071f5
+INFO: cli.azure.cli.core.util: Request URL: 'https://graph.microsoft.com/beta/copilot/admin/catalog/packages'
+INFO: cli.azure.cli.core.util: Request method: 'GET'
+INFO: cli.azure.cli.core.util: Request headers:
+INFO: cli.azure.cli.core.util:     'User-Agent': 'python/3.13.14 (macOS-26.5.2-arm64-arm-64bit-Mach-O) AZURECLI/2.87.0 (HOMEBREW)'
+INFO: cli.azure.cli.core.util:     'Accept-Encoding': 'gzip, deflate'
+INFO: cli.azure.cli.core.util:     'Accept': '*/*'
+INFO: cli.azure.cli.core.util:     'Connection': 'keep-alive'
+INFO: cli.azure.cli.core.util:     'x-ms-client-request-id': '169a3fbe-b10d-40e5-9255-7aad0a2d9c50'
+INFO: cli.azure.cli.core.util:     'CommandName': 'rest'
+INFO: cli.azure.cli.core.util:     'ParameterSetName': '--method --url --debug'
+INFO: cli.azure.cli.core.util:     'Authorization': 'Bearer eyJ0eXAiOiJKV...'
+INFO: cli.azure.cli.core.util: Request body:
+INFO: cli.azure.cli.core.util: None
+DEBUG: urllib3.connectionpool: Starting new HTTPS connection (1): graph.microsoft.com:443
+DEBUG: urllib3.connectionpool: https://graph.microsoft.com:443 "GET /beta/copilot/admin/catalog/packages HTTP/1.1" 403 None
+INFO: cli.azure.cli.core.util: Response status: 403
+INFO: cli.azure.cli.core.util: Response headers:
+INFO: cli.azure.cli.core.util:     'Transfer-Encoding': 'chunked'
+INFO: cli.azure.cli.core.util:     'Content-Type': 'application/json'
+INFO: cli.azure.cli.core.util:     'Content-Encoding': 'gzip'
+INFO: cli.azure.cli.core.util:     'Vary': 'Accept-Encoding'
+INFO: cli.azure.cli.core.util:     'Strict-Transport-Security': 'max-age=31536000'
+INFO: cli.azure.cli.core.util:     'request-id': '15b4720b-c3ca-496a-8bc8-acc655f56be2'
+INFO: cli.azure.cli.core.util:     'client-request-id': '15b4720b-c3ca-496a-8bc8-acc655f56be2'
+INFO: cli.azure.cli.core.util:     'x-ms-ags-diagnostic': '{"ServerInfo":{"DataCenter":"East US 2","Slice":"E","Ring":"5","ScaleUnit":"000","RoleInstance":"BN5PEPF000437E3"}}'
+INFO: cli.azure.cli.core.util:     'Date': 'Tue, 21 Jul 2026 16:44:20 GMT'
+INFO: cli.azure.cli.core.util: Response content:
+INFO: cli.azure.cli.core.util: {"error":{"code":"UnknownError","message":"","innerError":{"date":"2026-07-21T16:44:21","request-id":"15b4720b-c3ca-496a-8bc8-acc655f56be2","client-request-id":"15b4720b-c3ca-496a-8bc8-acc655f56be2"}}}
+DEBUG: cli.azure.cli.core.azclierror: Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/knack/cli.py", line 233, in invoke
+    cmd_result = self.invocation.execute(args)
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/core/commands/__init__.py", line 677, in execute
+    raise ex
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/core/commands/__init__.py", line 820, in _run_jobs_serially
+    results.append(self._run_job(expanded_arg, cmd_copy))
+                   ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/core/commands/__init__.py", line 789, in _run_job
+    result = cmd_copy(params)
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/core/commands/__init__.py", line 335, in __call__
+    return self.handler(*args, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/core/commands/command_operation.py", line 120, in handler
+    return op(**command_args)
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/command_modules/util/custom.py", line 23, in rest_call
+    r = send_raw_request(cmd.cli_ctx, method, url, headers, uri_parameters, body,
+                         skip_authorization_header, resource, output_file)
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/core/util.py", line 1097, in send_raw_request
+    raise HTTPError(reason, r)
+azure.cli.core.azclierror.HTTPError: Forbidden({"error":{"code":"UnknownError","message":"","innerError":{"date":"2026-07-21T16:44:21","request-id":"15b4720b-c3ca-496a-8bc8-acc655f56be2","client-request-id":"15b4720b-c3ca-496a-8bc8-acc655f56be2"}}})
+
+ERROR: cli.azure.cli.core.azclierror: Forbidden({"error":{"code":"UnknownError","message":"","innerError":{"date":"2026-07-21T16:44:21","request-id":"15b4720b-c3ca-496a-8bc8-acc655f56be2","client-request-id":"15b4720b-c3ca-496a-8bc8-acc655f56be2"}}})
+ERROR: az_command_data_logger: Forbidden({"error":{"code":"UnknownError","message":"","innerError":{"date":"2026-07-21T16:44:21","request-id":"15b4720b-c3ca-496a-8bc8-acc655f56be2","client-request-id":"15b4720b-c3ca-496a-8bc8-acc655f56be2"}}})
+DEBUG: cli.knack.cli: Event: Cli.PostExecute [<function AzCliLogging.deinit_cmd_metadata_logging at 0x106602a20>]
+INFO: az_command_data_logger: exit code: 1
+INFO: cli.__main__: Command ran in 0.403 seconds (init: 0.052, invoke: 0.351)
+INFO: cli.azure.cli.core.decorators: Suppress exception:
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/__main__.py", line 53, in <module>
+    raise ex
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/__main__.py", line 46, in <module>
+    sys.exit(exit_code)
+    ~~~~~~~~^^^^^^^^^^^
+SystemExit: 1
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/core/decorators.py", line 80, in _wrapped_func
+    return func(*args, **kwargs)
+  File "/opt/homebrew/Cellar/azure-cli/2.87.0/libexec/lib/python3.13/site-packages/azure/cli/core/telemetry.py", line 131, in generate_payload
+    payload = json.dumps(self.events, separators=(',', ':'))
+  File "/opt/homebrew/Cellar/python@3.13/3.13.14_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 242, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.14_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 202, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.14_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 263, in iterencode
+    return _iterencode(o, 0)
+  File "/opt/homebrew/Cellar/python@3.13/3.13.14_1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/encoder.py", line 182, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type HTTPError is not JSON serializable
+
+INFO: telemetry.main: Split cli events and extra events failure: the JSON object must be str, bytes or bytearray, not NoneType

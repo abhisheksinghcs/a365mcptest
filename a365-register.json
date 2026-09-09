@@ -1,0 +1,15 @@
+{
+  "serverName": "ext_ZavaSupportDemo",
+  "serverUrl": "https://<your-public-host>/mcp",
+  "authType": "APIKey",
+  "description": "Demo MCP server exposing a fake Zava IT support knowledge base and ticket system. For showcasing Agent 365 BYO MCP governance.",
+  "publisherName": "Contoso Demo",
+  "tools": [
+    { "name": "search_knowledge_base", "description": "Search the Zava internal knowledge base. Returns matching articles with id, title and summary." },
+    { "name": "get_support_ticket",    "description": "Get a Zava support ticket by id (for example ZAVA-1001). Returns status, priority, owner and summary." },
+    { "name": "create_support_ticket", "description": "Create a new Zava support ticket. priority must be Low, Medium or High. Returns the new ticket id." }
+  ],
+  "remoteScopes": null,
+  "externalOAuth": null,
+  "apiKey": { "location": "Header", "name": "X-API-Key" }
+}
